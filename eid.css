@@ -1,0 +1,124 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  p {
+    color: var(--Grayish-Blue);
+  }
+}
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Red-sh: hsl(0, 78%, 62%, 30%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Cyan-sh: hsl(180, 62%, 55%, 30%);
+  --Orange: hsl(34, 97%, 64%);
+  --Orange-sh: hsl(34, 97%, 64%, 30%);
+  --Blue: hsl(212, 86%, 64%);
+  --Blue-sh: hsl(212, 86%, 64% , 30%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 90%);
+}
+body {
+  background-color: var(--Very-Light-Gray);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.main {
+  width: 1000px;
+}
+.heading {
+  text-align: center;
+}
+.heading p {
+  max-width: 500px;
+  margin: 20px auto;
+}
+h1 {
+  font-size: 32px;
+  color: var(--Very-Dark-Blue);
+}
+h1:first-of-type {
+  font-weight: 200;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: center;
+  margin: 50px 0 30px;
+}
+.container div {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  border-top-width: 5px;
+  border-top-style: solid;
+}
+.container .middle {
+  display: grid;
+  row-gap: 30px;
+}
+.left {
+  border-color: var(--Cyan);
+  box-shadow: 5px 5px 10px var(--Cyan-sh);
+}
+.middle div:first-child {
+  border-color: var(--Red);
+  box-shadow: 5px 5px 10px var(--Red-sh);
+}
+.middle div:last-child {
+  border-color: var(--Orange);
+  box-shadow: 5px 5px 10px var(--Orange-sh);
+}
+.right {
+  border-color: var(--Blue);
+  box-shadow: 5px 5px 10px var(--Blue-sh);
+}
+.container div p {
+  font-size: 12px;
+  max-width: 250px;
+}
+img {
+  width: 50px;
+  align-self: flex-end;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+@media (max-width: 991px) {
+  .main {
+    width: 550px;
+    margin: 20px 0;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 767px) {
+  .main {
+    width: 375px;
+    margin: 20px 0;
+  }
+  h1 {
+    font-size: 25px;
+  }
+}
